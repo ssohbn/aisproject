@@ -19,7 +19,7 @@
 <body>
 	<div id="visualization"></div>
 	<script type="text/javascript">
-		var data = await fetch("./docs.json")
+		var data = fetch("static/docs.json").then(response => response.json())
 		console.log(data)
 		// DOM element where the Timeline will be attached
 		var container = document.getElementById("visualization");
